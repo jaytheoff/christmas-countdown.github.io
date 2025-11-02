@@ -1,0 +1,65 @@
+/* ...existing code... */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: comic-sans, sans-serif;
+    color: #ffffff;            
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+}
+/* main hero area */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+/* headings and copy */
+h1 {
+    font-size: 2.5rem;
+    margin: 0 0 0.5rem;
+}
+h3 {
+    font-size: 1.1rem;
+    margin: 0 0 2rem;
+    color: #ffd9c7;
+}
+/* countdown layout */
+.timebox {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.timebox h2 {
+    font-size: 2.25rem;
+    margin: 0;
+    color: #fff;
+}
+.timebox p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ffece6;
+}
+@media (max-width: 480px) {
+    h1 { font-size: 1.8rem; }
+    .timebox { gap: 1rem; flex-wrap: wrap; }
+    .timebox h2 { font-size: 1.5rem; }
+}
+
+body, html {
+  height: 100%;
+}
+
+body.bg {
+  background-color: #650000; 
+  background-image: url("Art/Christmas%20(2025).png"); /* or "Art/Christmas%20(2025).png" */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; 
+}

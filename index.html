@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Christmas Countdown</title>
+        <meta charset="utf-8">
+        <title>Christmas Countdown</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="bg">
+
+        <audio id="bgMusic" src="We Wish you a merry christmas.mp3" loop>
+            Your browser does not support the audio element.
+        </audio>
+        
+        <div class="hero">
+            <h1>Countdown to Christmas</h1>
+            <h3>Stay tuned for the <span style="background-color:rgb(255, 49, 49)">most wonderful time </span> of the year!</h3>
+
+            <div class = "timebox">
+                <h2 id=days>00</h2>
+                <p>Days</p>
+
+                <h2 id="hours">00</h2>
+                <p>Hours</p>
+
+                <h2 id="minutes">00</h2>
+                <p>Minutes</p>
+
+                <h2 id="seconds">00</h2>
+                <p>Seconds</p>
+            </div>
+        </div>
+        <script src="script.js"></script>
+       
+       <script>
+            // try to play immediately; if blocked by the browser, start on first user interaction
+            const bg = document.getElementById('bgMusic');
+            bg.volume = 0.7; // adjust as needed
+            bg.play().catch(() => {
+                document.addEventListener('click', () => bg.play().catch(() => {}), { once: true });
+            });
+       </script>
+
+    </body>
+
+</html>
