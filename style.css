@@ -56,7 +56,6 @@ body, html {
 }
 
 body.bg {
-  background-color: #650000; 
   background-image: url("Art/Christmas%20(2025).png"); /* or "Art/Christmas%20(2025).png" */
   background-position: center;
   background-repeat: no-repeat;
