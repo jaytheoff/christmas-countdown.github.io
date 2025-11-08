@@ -20,3 +20,10 @@ function updateCountdown() {
 }
 
 setInterval(updateCountdown, 1000);
+document.getElementById('bgMusic').play()
+    .then(() => {
+        console.log('Background music is playing.');
+    })
+    .catch((error) => {
+        console.error('Error playing background music:', error);
+    });
