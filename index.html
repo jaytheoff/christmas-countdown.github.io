@@ -10,9 +10,6 @@
 
     <body class="bg">
 
-        <audio id="bgMusic" autoplay src="We Wish you a merry christmas.mp3" loop>
-            Your browser does not support the audio element.
-        </audio>
         
         <div class="hero">
             <h1>Countdown to Christmas</h1>
@@ -34,14 +31,21 @@
         </div>
         <script src="script.js"></script>
        
-       <script>
-            // try to play immediately; if blocked by the browser, start on first user interaction
+        <audio id="bgMusic" src="we-wish-you-a-merry-christmas.mp3" loop></audio>
+
+        <script>
             const bg = document.getElementById('bgMusic');
-            bg.volume = 0.7; // adjust as needed
+            bg.volume = 0.7;
+
+            // autoplay attempt
             bg.play().catch(() => {
-                document.addEventListener('click', () => bg.play().catch(() => {}), { once: true });
+            // wait for any interaction
+            ['click', 'keydown', 'touchstart'].forEach(ev => {
+                document.addEventListener(ev, () => bg.play(), { once: true });
             });
-       </script>
+            });
+        </script>
+
 
     </body>
 
