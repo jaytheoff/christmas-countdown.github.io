@@ -2,7 +2,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: comic-sans, sans-serif;
+    font-family: "Comic Sans MS", sans-serif;
     color: #ffffff;            
     line-height: 1.4;
     -webkit-font-smoothing: antialiased;
@@ -58,7 +58,7 @@ body, html {
 }
 
 body.bg {
-  background-image: url("Art/Christmas%20(2025).png"); /* or "Art/Christmas%20(2025).png" */
+  background-image: url("Images/background.png"); /* or "Art/Christmas%20(2025).png" */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
